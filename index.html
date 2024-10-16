@@ -4,50 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Interactive Prover</title>
-        <link rel="stylesheet" href="style.css">
-        <script type="text/javascript">
-            window.MathJax = {
-              tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-              },
-              chtml: {
-                scale: 1.2
-              }
-            };
-          </script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
-        <h1>Interactive Proof</h1>
-        <div>
-            Prove that if for a relation $R$ we have $R^2 \subseteq R$, then we know that $R$ is transitive.
-        </div>
-        <div id="proof-list" class="list">
-            <div class="item idle" data-order-number="1">
-                <p>Writing $R^2$ is the same as writing $R \circ R$.</p>
-                <div class="drag-handle"></div>
-            </div>
-            <div class="item idle" data-order-number="2">
-                <p>The relational composition $R \circ R$ is all pairs $(x,y)$ such that there exists a $z$ such that $xRzRy$.</p>
-                <div class="drag-handle"></div>
-            </div>
-            <div class="item idle" data-order-number="3">
-                <p>Writing $xRzRy$ is the same as writing $xRz \wedge zRy$.</p>
-                <div class="drag-handle"></div>
-            </div>
-            <div class="item idle" data-order-number="4">
-                <p>$xRz \wedge zRy$ means that $(x,z) \in R$ and $(z,y) \in R$. Since $(x,y) \in R^2$ and we know that $R^2 \subseteq R$, then we also know that $(x,y) \in R$.</p>
-                <div class="drag-handle"></div>
-            </div>
-            <div class="item idle" data-order-number="5">
-                <p>So we know that whenever $(x,z)$ and $(z,y)$ are in $R$, $(x,y)$ is also in $R$.</p>
-                <div class="drag-handle"></div>
-            </div>
-            <div class="item idle" data-order-number="6">
-                <p>Therefore, $R$ is transitive.</p>
-                <div class="drag-handle"></div>
-            </div>
-        </div>
-        <script src="index.js"></script>
+        <h1>Test</h1>
+        <a href="/transitive_relation_composition">Transitive Relation Composition</a>
     </body>
+    <footer>
+        <div>
+            <a href="https://github.com/Danpythonman/interactive-prover" target="_blank" rel="noopener noreferrer">
+                <img src="/static/github.svg" alt="GitHub Logo" width="30px">
+            </a>
+            <a href="https://github.com/Danpythonman/interactive-prover" target="_blank" rel="noopener noreferrer">
+                Source Code
+            </a>
+        </div>
+        <p>
+            &copy; 2024 Daniel Di Giovanni
+        </p>
+    </footer>
 </html>
